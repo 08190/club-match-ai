@@ -24,50 +24,50 @@ export const PrivacyPreferences: React.FC = () => {
     {
       id: "graduate",
       icon: <User className="w-5 h-5" />,
-      label: "毕业年份",
-      status: "可见",
+      label: "Graduate",
+      status: "Visible",
       visible: true,
     },
     {
       id: "biography",
       icon: <FileText className="w-5 h-5" />,
-      label: "个人简介",
-      status: "未设置",
-      visible: false,
+      label: "Biography",
+      status: "Not set",
+      visible: true,
     },
     {
       id: "company",
       icon: <Briefcase className="w-5 h-5" />,
-      label: "公司 / 职位",
-      status: "未设置",
-      visible: false,
+      label: "Company",
+      status: "Not set",
+      visible: true,
     },
     {
       id: "school",
       icon: <GraduationCap className="w-5 h-5" />,
-      label: "学校 / 专业",
-      status: "理学院",
+      label: "School/Program",
+      status: "Faculty of Science",
       visible: true,
     },
     {
       id: "groups",
       icon: <Users className="w-5 h-5" />,
-      label: "我的社团",
-      status: "可见",
+      label: "My groups",
+      status: "Visible",
       visible: true,
     },
     {
       id: "events",
       icon: <Calendar className="w-5 h-5" />,
-      label: "我的活动",
-      status: "可见",
+      label: "My events",
+      status: "Visible",
       visible: true,
     },
     {
       id: "connections",
       icon: <Network className="w-5 h-5" />,
-      label: "我的人脉",
-      status: "可见",
+      label: "My connections",
+      status: "Visible",
       visible: true,
     },
   ]);
@@ -85,10 +85,10 @@ export const PrivacyPreferences: React.FC = () => {
       {/* Header */}
       <div className="mb-6">
         <h2 className="text-xl font-bold text-slate-900 mb-2">
-          设置你的隐私偏好
+          Set your privacy preferences
         </h2>
         <p className="text-sm text-slate-600">
-          仅共享你同意与他人分享的数据。
+          Only share the data that you are okay to share with others.
         </p>
       </div>
 
@@ -134,7 +134,7 @@ export const PrivacyPreferences: React.FC = () => {
       {/* Info Footer */}
       <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg mt-6">
         <p className="text-xs text-blue-700">
-          <span className="font-semibold">💡 提示:</span> 这些设置可以随时在账户隐私设置中更改。
+          <span className="font-semibold">💡 Tip:</span> These settings can be changed anytime in your account privacy settings.
         </p>
       </div>
     </div>

@@ -21,18 +21,18 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
   });
 
   const hobbyOptions = [
-    "摄影",
-    "编程",
-    "设计",
-    "音乐",
-    "运动",
-    "旅游",
-    "阅读",
-    "游戏",
-    "电影",
-    "烹饪",
-    "美术",
-    "写作",
+    "Photography",
+    "Programming",
+    "Design",
+    "Music",
+    "Sports",
+    "Travel",
+    "Reading",
+    "Gaming",
+    "Movies",
+    "Cooking",
+    "Art",
+    "Writing",
   ];
 
   const handleHobbyToggle = (hobby: string) => {
@@ -76,10 +76,10 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 sm:px-8 py-6 flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-white">
-                {currentStep === 1 ? "完成你的个人资料" : "隐私偏好设置"}
+                {currentStep === 1 ? "Welcome to Club Match! Let's build your profile." : "Set your privacy preferences"}
               </h1>
               <p className="text-blue-100 text-sm mt-1">
-                第 {currentStep} / 2
+                Step {currentStep} of 2
               </p>
             </div>
             <button
@@ -105,7 +105,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                 {/* Avatar Upload */}
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-3">
-                    上传头像（可选）
+                    Upload Photo (Optional)
                   </label>
                   <div className="flex items-center gap-4">
                     <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-dashed border-slate-300">
@@ -117,7 +117,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                     </div>
                     <button className="flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors text-slate-700 font-medium">
                       <Upload className="w-4 h-4" />
-                      选择头像
+                      Choose Photo
                     </button>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                 {/* Hobbies Selection */}
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-3">
-                    选择你的兴趣爱好（可选）
+                    Select Your Hobbies & Interests (Optional)
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {hobbyOptions.map((hobby) => (
@@ -147,14 +147,14 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                 {/* Bio Textarea */}
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-3">
-                    个人简介（可选）
+                    Personal Background / Bio (Optional)
                   </label>
                   <textarea
                     value={formData.bio}
                     onChange={(e) =>
                       setFormData((prev) => ({ ...prev, bio: e.target.value }))
                     }
-                    placeholder="告诉我们关于你的一些事情..."
+                    placeholder="Tell us about yourself..."
                     className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
                     rows={4}
                   />
@@ -176,7 +176,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
               className="flex items-center gap-2 px-4 py-2 text-slate-700 font-medium hover:bg-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronLeft className="w-4 h-4" />
-              上一步
+              Back
             </button>
 
             <div className="flex items-center gap-2">
@@ -197,11 +197,11 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
               {currentStep === 2 ? (
                 <>
                   <Check className="w-4 h-4" />
-                  完成设置
+                  Complete Setup
                 </>
               ) : (
                 <>
-                  下一步
+                  Next
                   <ChevronRight className="w-4 h-4" />
                 </>
               )}
@@ -214,7 +214,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
               onClick={onClose}
               className="text-sm text-slate-600 hover:text-blue-600 transition-colors font-medium"
             >
-              稍后设置
+              Skip for now
             </button>
           </div>
         </div>
