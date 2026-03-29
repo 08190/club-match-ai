@@ -12,7 +12,7 @@ interface EventCardProps {
 export const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const eventDate = new Date(event.date);
   const formattedDate = eventDate.toLocaleDateString("zh-CN", {
-    month: "短",
+    month: "short",
     day: "numeric",
   });
 
