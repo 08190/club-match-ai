@@ -218,10 +218,10 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
                     onClick={onClose}
                     className="flex-1 px-4 py-3 text-center text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Maybe Later
+                    下次再看
                   </button>
                   <button className="flex-1 px-4 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium flex items-center justify-center gap-2">
-                    Check It Out
+                    了解详情
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -232,7 +232,7 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
             {isUnboxing && (
               <div className="text-center space-y-3">
                 <div className="text-lg font-semibold text-purple-700">
-                  Opening Surprise...
+                  正在开启惊喜...
                 </div>
                 <div className="flex justify-center gap-1">
                   <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" />

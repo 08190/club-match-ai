@@ -9,8 +9,8 @@ export default function InterviewPage() {
   // Mock data for the current interview session
   const roleId = "media_officer";
   const clubName = "摄影协会";
-  const roleName = "Media Department Officer";
-  const interviewType = "AI Mock Interview";
+  const roleName = "媒体宣传部员";
+  const interviewType = "AI模拟面试";
 
   return (
     <div className="h-screen bg-gray-50 flex flex-col">
@@ -37,7 +37,7 @@ export default function InterviewPage() {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-sm text-gray-600 bg-blue-50 px-3 py-2 rounded-lg">
                 <Clock className="w-4 h-4 text-blue-600" />
-                <span>Est. 10 mins</span>
+                <span>约10分钟</span>
               </div>
               <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-600">
                 <Video className="w-5 h-5" />
@@ -61,7 +61,7 @@ export default function InterviewPage() {
 
               <div>
                 <h2 className="text-lg font-bold text-gray-900">{clubName}</h2>
-                <p className="text-sm text-gray-600 mt-1">Position</p>
+                <p className="text-sm text-gray-600 mt-1">应聘职位</p>
                 <p className="text-base font-semibold text-blue-600 mt-0.5">
                   {roleName}
                 </p>
@@ -71,23 +71,23 @@ export default function InterviewPage() {
               <div className="space-y-2 pt-4 border-t border-blue-200">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                  <span>Live Interview Mode</span>
+                  <span>实时面试进行中</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <Users className="w-4 h-4 text-blue-600" />
-                  <span>AI Interviewer</span>
+                  <span>AI面试官</span>
                 </div>
               </div>
 
               {/* Quick Tips */}
               <div className="bg-white bg-opacity-60 rounded px-3 py-2">
                 <p className="text-xs font-semibold text-gray-700 mb-2">
-                  💡 Tips:
+                  💡 面试建议：
                 </p>
                 <ul className="text-xs text-gray-600 space-y-1">
-                  <li>• Be honest and authentic</li>
-                  <li>• Share specific examples</li>
-                  <li>• Listen carefully</li>
+                  <li>• 诚实回答，展现真实自我</li>
+                  <li>• 用具体例子说明你的能力</li>
+                  <li>• 认真倾听AI面试官的问题</li>
                 </ul>
               </div>
             </div>
@@ -96,13 +96,13 @@ export default function InterviewPage() {
           {/* Session Info */}
           <div className="mt-6 space-y-3 text-xs text-gray-600">
             <div>
-              <p className="font-semibold text-gray-900 mb-1">Session ID</p>
+              <p className="font-semibold text-gray-900 mb-1">面试ID</p>
               <p className="font-mono bg-gray-100 px-2 py-1 rounded overflow-x-auto">
                 INT-2026031429
               </p>
             </div>
             <div>
-              <p className="font-semibold text-gray-900 mb-1">Started</p>
+              <p className="font-semibold text-gray-900 mb-1">开始时间</p>
               <p>{new Date().toLocaleString("zh-CN")}</p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function InterviewPage() {
             href="/student/dashboard"
             className="mt-6 w-full px-4 py-2 text-center text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
           >
-            Exit Interview
+            退出面试
           </Link>
         </div>
 

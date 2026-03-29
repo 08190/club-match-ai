@@ -84,9 +84,9 @@ export const BlindBoxWidget: React.FC<BlindBoxWidgetProps> = ({ clubs }) => {
                   🎁
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-white">Club Blind Box</h3>
+                  <h3 className="text-lg font-bold text-white">社团盲盒</h3>
                   <p className="text-sm text-purple-100">
-                    Discover something unexpected
+                    发现意想不到的惊喜
                   </p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export const BlindBoxWidget: React.FC<BlindBoxWidgetProps> = ({ clubs }) => {
 
           {/* Tooltip */}
           <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-            🎲 Don&apos;t know what to choose? Shake it!
+            🎲 不知道选哪个？摇一摇吧！
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
           </div>
         </button>

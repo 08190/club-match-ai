@@ -46,7 +46,7 @@ const KanbanColumn: React.FC<{
             {count}
           </span>
         </h3>
-        <p className="text-xs text-gray-500 mt-1">点击卡片查看详情或拖拽进度</p>
+        <p className="text-xs text-gray-500 mt-1">点击卡片查看详情，拖拽更新进度</p>
       </div>
 
       {/* Cards Container */}
@@ -95,7 +95,7 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({ applicants }) => {
       {/* Kanban Columns */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* New Applications */}
-        <KanbanColumn title="新申请" count={newApps.length} color="blue">
+        <KanbanColumn title="新投递" count={newApps.length} color="blue">
           {newApps.map((app) => (
             <ApplicantCard key={app.id} {...app} />
           ))}

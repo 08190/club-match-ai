@@ -21,7 +21,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-sm">
             <span className="text-xl">🚀</span>
             <span className="text-sm font-medium text-gray-700">
-              Your Platform to Match with Perfect Clubs
+              为你匹配最合适的校园社团
             </span>
           </div>
 
@@ -29,17 +29,17 @@ export default function Home() {
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Club Recruitment
+                智能匹配
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600">
-                Intelligent Matching
+                招聘平台
               </span>
               <br />
-              <span className="text-gray-900">Platform</span>
+              <span className="text-gray-900">Club Match AI</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto leading-relaxed">
-              Discover your perfect club match or find amazing recruits. Powered by intelligent matching technology.
+              发现适合你的社团，或找到最优秀的新成员。由智能匹配技术驱动。
             </p>
           </div>
 
@@ -52,8 +52,8 @@ export default function Home() {
             >
               <span className="flex items-center gap-3">
                 <span className="text-2xl">🎓</span>
-                <span className="hidden sm:inline">I am a Freshman</span>
-                <span className="sm:hidden">Go to C-Side</span>
+                <span className="hidden sm:inline">我是学生（进入C端）</span>
+                <span className="sm:hidden">学生入口</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               {/* Hover glow effect */}
@@ -67,8 +67,8 @@ export default function Home() {
             >
               <span className="flex items-center gap-3">
                 <span className="text-2xl">🏢</span>
-                <span className="hidden sm:inline">Club Management</span>
-                <span className="sm:hidden">Go to B-Side</span>
+                <span className="hidden sm:inline">社团管理（进入B端）</span>
+                <span className="sm:hidden">社团入口</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               {/* Hover glow effect */}
@@ -80,23 +80,23 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16">
             <div className="space-y-2 text-center">
               <div className="text-3xl mx-auto mb-2">⚡</div>
-              <h3 className="font-semibold text-gray-900">Smart Matching</h3>
+              <h3 className="font-semibold text-gray-900">智能匹配</h3>
               <p className="text-sm text-gray-600">
-                AI-powered matching algorithm
+                AI驱动的智能匹配算法
               </p>
             </div>
             <div className="space-y-2 text-center">
               <div className="text-3xl mx-auto mb-2">🎯</div>
-              <h3 className="font-semibold text-gray-900">Dual Platform</h3>
+              <h3 className="font-semibold text-gray-900">双端平台</h3>
               <p className="text-sm text-gray-600">
-                For students and club managers
+                为学生和社团管理员打造
               </p>
             </div>
             <div className="space-y-2 text-center">
               <div className="text-3xl mx-auto mb-2">🔒</div>
-              <h3 className="font-semibold text-gray-900">Secure & Private</h3>
+              <h3 className="font-semibold text-gray-900">安全隐私</h3>
               <p className="text-sm text-gray-600">
-                Your data is protected
+                你的数据受到保护
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
         {/* Footer */}
         <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 text-center">
           <p className="text-sm text-gray-600">
-            Built with <span className="text-red-500">❤️</span> for Campus Communities
+            用 <span className="text-red-500">❤️</span> 为校园社团打造
           </p>
         </div>
       </div>

@@ -45,8 +45,8 @@ export interface StatCard {
 export const mockJobPostings: JobPosting[] = [
   {
     id: "job_001",
-    title: "Content Creator",
-    department: "Marketing & Promotion",
+    title: "内容创作者",
+    department: "宣传推广部",
     status: "active",
     postedDate: "2026-03-20",
     applicantCount: 12,
@@ -54,8 +54,8 @@ export const mockJobPostings: JobPosting[] = [
   },
   {
     id: "job_002",
-    title: "Backend Developer",
-    department: "Technology",
+    title: "后端工程师",
+    department: "技术部",
     status: "active",
     postedDate: "2026-03-15",
     applicantCount: 8,
@@ -63,8 +63,8 @@ export const mockJobPostings: JobPosting[] = [
   },
   {
     id: "job_003",
-    title: "UI/UX Designer",
-    department: "Design",
+    title: "UI/UX设计师",
+    department: "设计部",
     status: "closed",
     postedDate: "2026-02-28",
     applicantCount: 5,
@@ -72,8 +72,8 @@ export const mockJobPostings: JobPosting[] = [
   },
   {
     id: "job_004",
-    title: "Event Coordinator",
-    department: "Operations",
+    title: "活动协调员",
+    department: "运营部",
     status: "active",
     postedDate: "2026-03-22",
     applicantCount: 15,
@@ -86,7 +86,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_001",
     name: "张三",
-    jobRole: "Content Creator",
+    jobRole: "内容创作者",
     appliedDate: "2026-03-27",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
@@ -101,7 +101,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_002",
     name: "李四",
-    jobRole: "Content Creator",
+    jobRole: "内容创作者",
     appliedDate: "2026-03-26",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
@@ -116,7 +116,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_003",
     name: "王五",
-    jobRole: "Backend Developer",
+    jobRole: "后端工程师",
     appliedDate: "2026-03-25",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
@@ -131,7 +131,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_004",
     name: "赵六",
-    jobRole: "Content Creator",
+    jobRole: "内容创作者",
     appliedDate: "2026-03-24",
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
@@ -146,7 +146,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_005",
     name: "孙七",
-    jobRole: "Backend Developer",
+    jobRole: "后端工程师",
     appliedDate: "2026-03-23",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
@@ -161,7 +161,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_006",
     name: "周八",
-    jobRole: "UI/UX Designer",
+    jobRole: "UI/UX设计师",
     appliedDate: "2026-03-22",
     avatar:
       "https://images.unsplash.com/photo-1519394537287-41cebad4833d?w=100&h=100&fit=crop",
@@ -176,7 +176,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_007",
     name: "吴九",
-    jobRole: "Event Coordinator",
+    jobRole: "活动协调员",
     appliedDate: "2026-03-21",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
@@ -191,7 +191,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_008",
     name: "郑十",
-    jobRole: "Content Creator",
+    jobRole: "内容创作者",
     appliedDate: "2026-03-20",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
@@ -206,7 +206,7 @@ export const mockApplicants: Applicant[] = [
   {
     id: "app_009",
     name: "陈十一",
-    jobRole: "Backend Developer",
+    jobRole: "后端工程师",
     appliedDate: "2026-03-19",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",

@@ -66,7 +66,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ roleId }) => {
       aiMessage = {
         id: `ai-${currentQuestionIndex}`,
         sender: "interviewer",
-        text: `Great answer! ${generateAIFeedback()} \n\n📍 Question ${currentQuestionIndex + 2} of 3:\n${nextQuestion.question}`,
+        text: `太棒了！${generateAIFeedback()} \n\n📍 第${currentQuestionIndex + 2}题(共3题):\n${nextQuestion.question}`,
         timestamp: new Date(),
       };
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -117,7 +117,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ roleId }) => {
   };
 
   /**
-   * Format timestamp
+   * 格式化时间戳
    */
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("zh-CN", {
@@ -195,7 +195,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ roleId }) => {
             </div>
             <div>
               <p className="text-sm font-semibold text-gray-900">
-                Interview Complete! 🎉
+                面试完成！🎉
               </p>
               <p className="text-xs text-gray-600 mt-0.5">
                 Thank you for your time. Check your email for updates.

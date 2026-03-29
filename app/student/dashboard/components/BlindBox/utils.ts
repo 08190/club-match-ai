@@ -24,17 +24,17 @@ const CLUB_DOMAINS: { [key: string]: string } = {
   "校园创意中心": "Creative",
 };
 
-// Recommendation reasons based on domain
+// 根据不同俱乐部分类的推荐原因
 const RECOMMENDATION_REASONS: { [key: string]: string } = {
-  Arts: "Try something different! This club explores the visual storytelling side of events.",
+  Arts: "尝试不同的方向！这个社团探索视觉叙事和创意表达。",
   Creative:
-    "Expand your horizon! Creative thinking skills transfer across all disciplines.",
+    "拓宽你的视野！创意思维在任何领域都很重要。",
   Design:
-    "Design thinking will enhance your technical projects. Great collaboration opportunity!",
+    "设计思维会提升你的技术项目。这是绝佳的跨领域合作机会！",
   Events:
-    "Community and networking matter! Build soft skills while making memories.",
+    "社区和人脉很重要！在活动组织中发展软实力。",
   Sports:
-    "Balance your tech life! Active communities boost creativity and teamwork.",
+    "平衡技术生活！运动社团能提升创意和团队合作。",
 };
 
 /**
@@ -69,22 +69,22 @@ export function getBlindBoxRecommendation(
   // If no opposite domain clubs, just pick random
   if (oppositeDomainClubs.length === 0) {
     const randomClub = allClubs[Math.floor(Math.random() * allClubs.length)];
-    const randomDomain = CLUB_DOMAINS[randomClub.name] || "This Club";
+    const randomDomain = CLUB_DOMAINS[randomClub.name] || "这个";
     return {
       club: randomClub,
-      reason: `Discover ${randomDomain}! This club brings a fresh perspective to your journey.`,
+      reason: `发现${randomDomain}的精彩！这个社团会为你打开新的视角。`,
     };
   }
 
   // Pick a random club from opposite domain clubs
   const selectedClub =
     oppositeDomainClubs[Math.floor(Math.random() * oppositeDomainClubs.length)];
-  const clubDomain = CLUB_DOMAINS[selectedClub.name] || "This Club";
+  const clubDomain = CLUB_DOMAINS[selectedClub.name] || "这个";
 
   return {
     club: selectedClub,
     reason:
       RECOMMENDATION_REASONS[clubDomain] ||
-      `Explore ${clubDomain}! You might discover something unexpected.`,
+      `探索${clubDomain}的世界！你可能会发现意想不到的机会。`,
   };
 }
