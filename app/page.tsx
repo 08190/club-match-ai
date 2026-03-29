@@ -1,65 +1,114 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { ArrowRight, Users, Building2 } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Background decorative elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-200 rounded-full blur-3xl opacity-20" />
+        <div className="absolute top-1/2 left-10 w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-10" />
+      </div>
+
+      {/* Content */}
+      <div className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        {/* Hero Section */}
+        <div className="max-w-2xl mx-auto text-center space-y-8 sm:space-y-12">
+          {/* Header Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-sm">
+            <span className="text-xl">🚀</span>
+            <span className="text-sm font-medium text-gray-700">
+              Your Platform to Match with Perfect Clubs
+            </span>
+          </div>
+
+          {/* Main Title */}
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+                Club Recruitment
+              </span>
+              <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600">
+                Intelligent Matching
+              </span>
+              <br />
+              <span className="text-gray-900">Platform</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto leading-relaxed">
+              Discover your perfect club match or find amazing recruits. Powered by intelligent matching technology.
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-4 sm:pt-8">
+            {/* C-Side Button */}
+            <Link
+              href="/student/dashboard"
+              className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 active:scale-95"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <span className="flex items-center gap-3">
+                <span className="text-2xl">🎓</span>
+                <span className="hidden sm:inline">I am a Freshman</span>
+                <span className="sm:hidden">Go to C-Side</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity bg-white blur-lg" />
+            </Link>
+
+            {/* B-Side Button */}
+            <Link
+              href="/club/workspace"
+              className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 active:scale-95"
             >
-              Learning
-            </a>{" "}
-            center.
+              <span className="flex items-center gap-3">
+                <span className="text-2xl">🏢</span>
+                <span className="hidden sm:inline">Club Management</span>
+                <span className="sm:hidden">Go to B-Side</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity bg-white blur-lg" />
+            </Link>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16">
+            <div className="space-y-2 text-center">
+              <div className="text-3xl mx-auto mb-2">⚡</div>
+              <h3 className="font-semibold text-gray-900">Smart Matching</h3>
+              <p className="text-sm text-gray-600">
+                AI-powered matching algorithm
+              </p>
+            </div>
+            <div className="space-y-2 text-center">
+              <div className="text-3xl mx-auto mb-2">🎯</div>
+              <h3 className="font-semibold text-gray-900">Dual Platform</h3>
+              <p className="text-sm text-gray-600">
+                For students and club managers
+              </p>
+            </div>
+            <div className="space-y-2 text-center">
+              <div className="text-3xl mx-auto mb-2">🔒</div>
+              <h3 className="font-semibold text-gray-900">Secure & Private</h3>
+              <p className="text-sm text-gray-600">
+                Your data is protected
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 text-center">
+          <p className="text-sm text-gray-600">
+            Built with <span className="text-red-500">❤️</span> for Campus Communities
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
