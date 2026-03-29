@@ -30,23 +30,23 @@ const KanbanColumn: React.FC<{
   color: string;
 }> = ({ title, count, children, color }) => {
   const colorClasses = {
-    blue: "border-l-4 border-blue-500 bg-blue-50",
-    purple: "border-l-4 border-purple-500 bg-purple-50",
+    blue: "border-l-4 border-blue-600 bg-blue-50",
+    purple: "border-l-4 border-blue-400 bg-slate-50",
     orange: "border-l-4 border-orange-500 bg-orange-50",
-    green: "border-l-4 border-green-500 bg-green-50",
+    green: "border-l-4 border-green-600 bg-green-50",
     red: "border-l-4 border-red-500 bg-red-50",
   };
 
   return (
     <div className={`rounded-lg p-4 min-h-[600px] ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue} flex flex-col`}>
       <div className="mb-4">
-        <h3 className="font-bold text-gray-900 flex items-center gap-2">
+        <h3 className="font-bold text-slate-900 flex items-center gap-2">
           {title}
-          <span className="inline-flex items-center justify-center w-6 h-6 bg-gray-300 rounded-full text-xs font-bold text-gray-700">
+          <span className="inline-flex items-center justify-center w-6 h-6 bg-slate-200 rounded-full text-xs font-bold text-slate-700">
             {count}
           </span>
         </h3>
-        <p className="text-xs text-gray-500 mt-1">点击卡片查看详情，拖拽更新进度</p>
+        <p className="text-xs text-slate-500 mt-1">点击卡片查看详情，拖拽更新进度</p>
       </div>
 
       {/* Cards Container */}
@@ -74,20 +74,20 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({ applicants }) => {
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
           <Kanban className="w-7 h-7 text-blue-600" />
           智能ATS看板
         </h2>
-        <div className="flex items-center gap-2 text-sm text-gray-600">
+        <div className="flex items-center gap-2 text-sm text-slate-600">
           <span>总计:</span>
-          <span className="font-bold text-gray-900">{applicants.length}</span>
+          <span className="font-bold text-slate-900">{applicants.length}</span>
           <span>位申请者</span>
         </div>
       </div>
 
       {/* Info Banner */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4">
-        <p className="text-sm text-gray-700">
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <p className="text-sm text-slate-700">
           <span className="font-semibold">💡 AI驱动特性:</span> 每个卡片的"匹配度"和"技能标签"由智能简历解析引擎自动生成，实时匹配招聘需求。拖拽卡片进行状态更新。
         </p>
       </div>

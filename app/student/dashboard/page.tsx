@@ -9,7 +9,7 @@ import { mockStudentProfile, mockClubs } from "./lib/mockData";
 
 export default function StudentDashboard() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       {/* Navigation Bar */}
       <Navbar userAvatar={mockStudentProfile.avatar} userName={mockStudentProfile.name} />
 
@@ -33,18 +33,18 @@ export default function StudentDashboard() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white mt-16">
+      <footer className="border-t border-slate-200 bg-white mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 关于我们
               </h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     平台介绍
                   </a>
@@ -52,7 +52,7 @@ export default function StudentDashboard() {
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     核心价值
                   </a>
@@ -60,14 +60,14 @@ export default function StudentDashboard() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 帮助中心
               </h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     使用指南
                   </a>
@@ -75,7 +75,7 @@ export default function StudentDashboard() {
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     常见问题
                   </a>
@@ -83,14 +83,14 @@ export default function StudentDashboard() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 联系方式
               </h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     意见反馈
                   </a>
@@ -98,7 +98,7 @@ export default function StudentDashboard() {
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     联系支持
                   </a>
@@ -106,14 +106,14 @@ export default function StudentDashboard() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 法律
               </h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     隐私政策
                   </a>
@@ -121,7 +121,7 @@ export default function StudentDashboard() {
                 <li>
                   <a
                     href="#"
-                    className="text-sm text-gray-600 hover:text-blue-600"
+                    className="text-sm text-slate-600 hover:text-blue-600"
                   >
                     条款协议
                   </a>
@@ -130,12 +130,12 @@ export default function StudentDashboard() {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between">
-            <p className="text-gray-600 text-sm">
+          <div className="border-t border-slate-200 pt-8 flex flex-col sm:flex-row items-center justify-between">
+            <p className="text-slate-600 text-sm">
               &copy; 2026 Club Match AI. 所有权利保留。
             </p>
             <div className="flex gap-4 mt-4 sm:mt-0">
-              <a href="#" className="text-gray-400 hover:text-gray-600">
+              <a href="#" className="text-slate-400 hover:text-slate-600">
                 <span className="sr-only">微博</span>
                 <svg
                   className="w-5 h-5"
@@ -145,7 +145,7 @@ export default function StudentDashboard() {
                   <path d="M8.29 20a11.99 11.99 0 0 1-5.82-1.11A12 12 0 0 1 .44 12.1a12 12 0 0 1 1.62-6.42 12 12 0 0 1 5.28-4.64A12 12 0 0 1 20 10.6a12 12 0 0 1-1.87 6.59 12 12 0 0 1-5.35 4.5A11.97 11.97 0 0 1 8.29 20Z" />
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-600">
+              <a href="#" className="text-slate-400 hover:text-slate-600">
                 <span className="sr-only">微信</span>
                 <svg
                   className="w-5 h-5"

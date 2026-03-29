@@ -50,12 +50,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab = "dashboard" }) => 
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-2 hover:bg-gray-100 rounded-lg"
+        className="lg:hidden fixed top-4 left-4 z-40 p-2 hover:bg-slate-200 rounded-lg"
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-gray-700" />
+          <X className="w-6 h-6 text-slate-900" />
         ) : (
-          <Menu className="w-6 h-6 text-gray-700" />
+          <Menu className="w-6 h-6 text-slate-900" />
         )}
       </button>
 
@@ -69,20 +69,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab = "dashboard" }) => 
 
       {/* Sidebar */}
       <aside
-        className={`fixed lg:sticky top-0 left-0 h-screen w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-lg z-30 transition-transform duration-300 ${
+        className={`fixed lg:sticky top-0 left-0 h-screen w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white shadow-lg z-30 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
       >
         <div className="h-full flex flex-col">
           {/* Logo Section */}
-          <div className="p-6 border-b border-gray-700">
+          <div className="p-6 border-b border-slate-700">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">CM</span>
               </div>
               <div>
                 <h1 className="font-bold text-lg">Club Match</h1>
-                <p className="text-xs text-gray-400">管理工作区</p>
+                <p className="text-xs text-slate-400">管理工作区</p>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab = "dashboard" }) => 
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                     isActive
                       ? "bg-blue-600 text-white shadow-lg"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                      : "text-slate-300 hover:bg-slate-700 hover:text-white"
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -117,11 +117,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab = "dashboard" }) => 
           </nav>
 
           {/* Club Info Section */}
-          <div className="p-4 border-t border-gray-700">
-            <div className="bg-gray-700 rounded-lg p-4 mb-4">
-              <p className="text-xs text-gray-300 mb-2">当前社团</p>
+          <div className="p-4 border-t border-slate-700">
+            <div className="bg-slate-700 rounded-lg p-4 mb-4">
+              <p className="text-xs text-slate-300 mb-2">当前社团</p>
               <p className="font-semibold">摄影协会</p>
-              <p className="text-xs text-gray-400 mt-1">245 位成员</p>
+              <p className="text-xs text-slate-400 mt-1">245 位成员</p>
             </div>
 
             {/* Logout Button */}

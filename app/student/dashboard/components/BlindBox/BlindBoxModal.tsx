@@ -160,13 +160,13 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-lg transition-colors z-10"
+            className="absolute top-4 right-4 p-2 hover:bg-slate-100 rounded-lg transition-colors z-10"
           >
-            <X className="w-5 h-5 text-gray-600" />
+            <X className="w-5 h-5 text-slate-600" />
           </button>
 
           {/* Unboxing Container */}
-          <div className="relative bg-gradient-to-b from-purple-100 to-pink-100 pt-12 pb-8 px-6 min-h-80 flex flex-col items-center justify-center">
+          <div className="relative bg-blue-50 pt-12 pb-8 px-6 min-h-80 flex flex-col items-center justify-center border-b border-blue-200">
             {/* Confetti Animation */}
             {isUnboxing && (
               <>
@@ -189,26 +189,26 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
               <div className="reveal-content w-full space-y-6">
                 {/* Club Logo */}
                 <div className="flex justify-center">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center border-4 border-white shadow-lg">
+                  <div className="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center border-4 border-white shadow-lg">
                     <span className="text-4xl">{clubEmoji}</span>
                   </div>
                 </div>
 
                 {/* Club Info */}
                 <div className="text-center space-y-2">
-                  <h2 className="text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl font-bold text-slate-900">
                     {club.name}
                   </h2>
-                  <p className="text-sm text-gray-600 line-clamp-2">
+                  <p className="text-sm text-slate-600 line-clamp-2">
                     {club.description}
                   </p>
                 </div>
 
                 {/* Recommendation Reason */}
-                <div className="bg-white bg-opacity-70 rounded-lg p-4 border-l-4 border-purple-500">
+                <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600 shadow-sm">
                   <div className="flex gap-2 items-start">
-                    <Zap className="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-700">{reason}</p>
+                    <Zap className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-slate-700">{reason}</p>
                   </div>
                 </div>
 
@@ -216,11 +216,11 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
                 <div className="flex gap-3 pt-4">
                   <button
                     onClick={onClose}
-                    className="flex-1 px-4 py-3 text-center text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex-1 px-4 py-3 text-center text-sm font-medium text-slate-700 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors"
                   >
                     下次再看
                   </button>
-                  <button className="flex-1 px-4 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium flex items-center justify-center gap-2">
+                  <button className="flex-1 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center justify-center gap-2">
                     了解详情
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -231,13 +231,13 @@ export const BlindBoxModal: React.FC<BlindBoxModalProps> = ({
             {/* Unboxing State - Loading */}
             {isUnboxing && (
               <div className="text-center space-y-3">
-                <div className="text-lg font-semibold text-purple-700">
+                <div className="text-lg font-semibold text-blue-700">
                   正在开启惊喜...
                 </div>
                 <div className="flex justify-center gap-1">
-                  <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" />
-                  <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce delay-100" />
-                  <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce delay-200" />
+                  <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" />
+                  <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce delay-100" />
+                  <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce delay-200" />
                 </div>
               </div>
             )}

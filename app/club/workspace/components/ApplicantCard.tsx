@@ -40,7 +40,7 @@ const CircularProgress: React.FC<{ percentage: number; size?: number }> = ({
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#e5e7eb"
+          stroke="#e2e8f0"
           strokeWidth="4"
         />
         <circle
@@ -57,8 +57,8 @@ const CircularProgress: React.FC<{ percentage: number; size?: number }> = ({
         />
       </svg>
       <div className="absolute flex flex-col items-center justify-center">
-        <span className="text-sm font-bold text-gray-900">{percentage}%</span>
-        <span className="text-xs text-gray-500">匹配度</span>
+        <span className="text-sm font-bold text-slate-900">{percentage}%</span>
+        <span className="text-xs text-slate-500">匹配度</span>
       </div>
     </div>
   );
@@ -82,21 +82,21 @@ export const ApplicantCard: React.FC<ApplicantCardProps> = ({
   );
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-4 space-y-4">
+    <div className="bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow p-4 space-y-4">
       {/* Header with Avatar and Apply Date */}
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3 flex-1">
           <img
             src={avatar}
             alt={name}
-            className="w-12 h-12 rounded-full object-cover border-2 border-blue-500"
+            className="w-12 h-12 rounded-full object-cover border-2 border-blue-600"
           />
           <div className="flex-1">
-            <h3 className="font-bold text-gray-900 text-sm">{name}</h3>
-            <p className="text-xs text-gray-500">{jobRole}</p>
+            <h3 className="font-bold text-slate-900 text-sm">{name}</h3>
+            <p className="text-xs text-slate-500">{jobRole}</p>
           </div>
         </div>
-        <span className="text-xs text-gray-500 whitespace-nowrap px-2 py-1 bg-gray-100 rounded">
+        <span className="text-xs text-slate-500 whitespace-nowrap px-2 py-1 bg-slate-100 rounded">
           {appliedDaysAgo === 0 ? "今天" : `${appliedDaysAgo}天前`}
         </span>
       </div>
@@ -110,7 +110,7 @@ export const ApplicantCard: React.FC<ApplicantCardProps> = ({
       <div className="space-y-2">
         <div className="flex items-center gap-1 mb-2">
           <Zap className="w-4 h-4 text-amber-500" />
-          <p className="text-xs font-semibold text-gray-700">AI解析技能</p>
+          <p className="text-xs font-semibold text-slate-700">AI解析技能</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
@@ -127,22 +127,22 @@ export const ApplicantCard: React.FC<ApplicantCardProps> = ({
       {/* Resume Score Bar */}
       <div className="space-y-1">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-gray-700">简历评分</span>
-          <span className="text-xs font-bold text-gray-900">{resumeScore}</span>
+          <span className="text-xs font-medium text-slate-700">简历评分</span>
+          <span className="text-xs font-bold text-slate-900">{resumeScore}</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-slate-200 rounded-full h-2">
           <div
-            className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full"
+            className="bg-blue-600 h-2 rounded-full"
             style={{ width: `${resumeScore}%` }}
           ></div>
         </div>
       </div>
 
       {/* Contact Info */}
-      <div className="space-y-2 pt-2 border-t border-gray-100">
+      <div className="space-y-2 pt-2 border-t border-slate-100">
         <a
           href={`mailto:${email}`}
-          className="flex items-center gap-2 text-xs text-gray-600 hover:text-blue-600 transition-colors"
+          className="flex items-center gap-2 text-xs text-slate-600 hover:text-blue-600 transition-colors"
         >
           <Mail className="w-3 h-3" />
           {email}

@@ -68,13 +68,13 @@ export const BlindBoxWidget: React.FC<BlindBoxWidgetProps> = ({ clubs }) => {
         >
           {/* Main Card */}
           <div
-            className={`w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-purple-300 overflow-hidden ${
+            className={`w-full bg-blue-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border-2 border-blue-200 overflow-hidden ${
               isShaking ? "blind-box-shake" : "blind-box-float"
             } ${!isShaking ? "cursor-pointer hover:scale-105" : "cursor-not-allowed opacity-75"}`}
           >
             {/* Animated background */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-pulse" />
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse" />
             </div>
 
             {/* Content */}
@@ -84,20 +84,20 @@ export const BlindBoxWidget: React.FC<BlindBoxWidgetProps> = ({ clubs }) => {
                   🎁
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-bold text-white">社团盲盒</h3>
-                  <p className="text-sm text-purple-100">
+                  <h3 className="text-lg font-bold text-slate-900">社团盲盒</h3>
+                  <p className="text-sm text-blue-600">
                     发现意想不到的惊喜
                   </p>
                 </div>
               </div>
-              <Sparkles className="w-6 h-6 text-yellow-200 animate-spin" style={{ animationDuration: "3s" }} />
+              <Sparkles className="w-6 h-6 text-blue-500 animate-spin" style={{ animationDuration: "3s" }} />
             </div>
           </div>
 
           {/* Tooltip */}
-          <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+          <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs font-medium px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
             🎲 不知道选哪个？摇一摇吧！
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-800" />
           </div>
         </button>
       </div>

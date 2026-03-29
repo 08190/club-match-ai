@@ -59,7 +59,7 @@ export const mockClubs: ClubCard[] = [
     name: "摄影协会",
     description: "专业摄影爱好者组织",
     coverImage:
-      "https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1606986628025-35d57e735ae0?auto=format&fit=crop&w=800&q=80",
     tags: ["高频活动", "硬核输出"],
     rating: 4.8,
     memberCount: 245,
@@ -70,7 +70,7 @@ export const mockClubs: ClubCard[] = [
     name: "电竞联盟",
     description: "校园电竞赛事组织中心",
     coverImage:
-      "https://images.unsplash.com/photo-1538481143235-b6c1499bad46?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1538481143235-b6c1499bad46?auto=format&fit=crop&w=800&q=80",
     tags: ["竞争性", "高频活动"],
     rating: 4.6,
     memberCount: 342,
@@ -81,7 +81,7 @@ export const mockClubs: ClubCard[] = [
     name: "辩论队",
     description: "校园辩论赛冠军队伍",
     coverImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     tags: ["精英选拔", "高输出"],
     rating: 4.9,
     memberCount: 58,
@@ -92,7 +92,7 @@ export const mockClubs: ClubCard[] = [
     name: "编程爱好者社区",
     description: "算法竞赛与项目开发",
     coverImage:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     tags: ["技术输出", "高学习"],
     rating: 4.7,
     memberCount: 198,
@@ -103,7 +103,7 @@ export const mockClubs: ClubCard[] = [
     name: "创意工坊",
     description: "产品设计与创新创业孵化",
     coverImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
     tags: ["创业导向", "实践机会"],
     rating: 4.5,
     memberCount: 127,
@@ -114,7 +114,7 @@ export const mockClubs: ClubCard[] = [
     name: "旅游兴趣小组",
     description: "探索校园与城市的冒险者们",
     coverImage:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
     tags: ["社交属性", "定期活动"],
     rating: 4.4,
     memberCount: 89,

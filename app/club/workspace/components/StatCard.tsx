@@ -18,15 +18,15 @@ const iconMap = {
 };
 
 const colorClasses = {
-  blue: "from-blue-50 to-blue-100 border-blue-200",
-  green: "from-green-50 to-green-100 border-green-200",
-  purple: "from-purple-50 to-purple-100 border-purple-200",
+  blue: "bg-blue-50 border-blue-200",
+  green: "bg-green-50 border-green-200",
+  purple: "bg-blue-100 border-blue-200",
 };
 
 const iconColorClasses = {
   blue: "text-blue-600 bg-blue-100",
   green: "text-green-600 bg-green-100",
-  purple: "text-purple-600 bg-purple-100",
+  purple: "text-blue-600 bg-blue-100",
 };
 
 export const StatCard: React.FC<StatCardProps> = ({
@@ -43,12 +43,12 @@ export const StatCard: React.FC<StatCardProps> = ({
 
   return (
     <div
-      className={`bg-gradient-to-br ${bgClass} border rounded-lg p-6 hover:shadow-lg transition-all`}
+      className={`${bgClass} border rounded-xl p-6 hover:shadow-md transition-shadow shadow-sm`}
     >
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm text-gray-600 font-medium mb-2">{title}</p>
-          <p className="text-3xl font-bold text-gray-900">{value}</p>
+          <p className="text-sm text-slate-600 font-medium mb-2">{title}</p>
+          <p className="text-3xl font-bold text-slate-900">{value}</p>
           <div className="flex items-center gap-1 mt-3">
             {isPositive ? (
               <ArrowUp className={`w-4 h-4 text-green-600`} />
