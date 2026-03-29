@@ -1,13 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { DigitalAvatarCard } from "./components/DigitalAvatarCard";
 import { DiscoveryFeed } from "./components/DiscoveryFeed";
 import { BlindBoxWidget } from "./components/BlindBox/BlindBoxWidget";
+import { QuickActionCards } from "./components/QuickActionCards";
+import { ResourceBanner } from "./components/ResourceBanner";
+import { OnboardingModal } from "./components/OnboardingModal";
 import { mockStudentProfile, mockClubs } from "./lib/mockData";
 
 export default function StudentDashboard() {
+  const [showOnboarding, setShowOnboarding] = useState(false);
+
+  // Check if user has completed onboarding (in real app, this would come from backend)
+  useEffect(() => {
+    // Simulate first-time user check
+    const hasCompletedOnboarding = localStorage.getItem(
+      "onboarding_completed"
+    );
+    if (!hasCompletedOnboarding) {
+      // Delay showing modal slightly for better UX
+      const timer = setTimeout(() => setShowOnboarding(true), 800);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleOnboardingComplete = () => {
+    localStorage.setItem("onboarding_completed", "true");
+    setShowOnboarding(false);
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Navigation Bar */}
@@ -15,6 +38,13 @@ export default function StudentDashboard() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Quick Action Cards */}
+        <QuickActionCards />
+
+        {/* Resource Banner */}
+        <ResourceBanner />
+
+        {/* Main Dashboard Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column: Digital Avatar (1/3) */}
           <div className="lg:col-span-1">
@@ -25,7 +55,7 @@ export default function StudentDashboard() {
           <div className="lg:col-span-2">
             {/* Blind Box Feature - Serendipity Matcher */}
             <BlindBoxWidget clubs={mockClubs} />
-            
+
             {/* Club Discovery Feed */}
             <DiscoveryFeed clubs={mockClubs} />
           </div>
@@ -159,6 +189,12 @@ export default function StudentDashboard() {
           </div>
         </div>
       </footer>
+
+      {/* Onboarding Modal */}
+      <OnboardingModal
+        isOpen={showOnboarding}
+        onClose={handleOnboardingComplete}
+      />
     </div>
   );
 }

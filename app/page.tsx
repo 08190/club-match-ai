@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { UpcomingEventsSection } from "./components/UpcomingEventsSection";
 
 export default function Home() {
   return (
@@ -100,6 +101,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* Upcoming Events Section */}
+      <UpcomingEventsSection />
     </div>
   );
 }
